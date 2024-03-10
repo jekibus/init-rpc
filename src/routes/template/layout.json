@@ -1,0 +1,24 @@
+{
+	"title": "Template Page",
+	"description": "This is page description",
+	"options": {
+		"no_gap": false
+	},
+	"grid": [
+		{
+			"component": "widgets/template",
+			"config": {
+				"title": "Welcome to Merdika",
+				"subtitle": "Please update this content"
+			}
+		},
+		{
+			"component": "widgets/template",
+			"config": {
+				"title": "You have class option",
+				"subtitle": "Using class key you have more feature"
+			},
+			"class": "text-right"
+		}
+	]
+}
