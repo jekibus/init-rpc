@@ -35,7 +35,7 @@
 				<Button
 					on:click={() => (isCollapsed = !isCollapsed)}
 					class={cn(
-						'absolute hidden sm:inline-flex',
+						'absolute hidden text-gray-400 sm:inline-flex',
 						isCollapsed ? '-right-[17px] top-[10px] h-4 w-4' : '-right-5 top-2 h-5 w-6'
 					)}
 					size="icon"
@@ -65,7 +65,7 @@
 				<UserNav />
 			</div>
 		</div>
-		<Separator />
+		<Separator class="w-full" />
 		<ScrollArea orientation="both" class="h-[calc(100vh-50px)] w-full pl-1">
 			<div class="px-2 pt-1">
 				<slot />
