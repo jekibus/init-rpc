@@ -1,11 +1,7 @@
 import type { PageServerLoad } from './$types';
-import layout from './layout.json';
+// @ts-ignore
+import layout from './layout.yaml';
 
 export const load: PageServerLoad = async () => {
-	return {
-		title: layout.title,
-		description: layout.description,
-		options: layout.options,
-		grid: layout.grid
-	};
+	return layout;
 };

@@ -1,11 +1,9 @@
-import { convertToComponent } from '$lib/helper';
+import { getComponents } from '$lib/helper';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = async ({ data }) => {
-	let { grid } = data;
-	const components = await convertToComponent(grid.length);
+export const load: PageLoad = async ({ data }: any) => {
 	return {
 		...data,
-		components
+		components: await getComponents(data.grid)
 	};
 };
