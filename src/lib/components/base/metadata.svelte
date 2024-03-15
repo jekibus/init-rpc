@@ -9,16 +9,16 @@
 
 <svelte:head>
 	<title>{title}</title>
-	<meta name="description" content={siteConfig.description} />
+	<meta name="description" content={$page.data?.description || siteConfig.description} />
 	<meta name="keywords" content={siteConfig.keywords} />
-	<meta name="author" content="huntabyte" />
+	<meta name="author" content="jekibus" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content={siteConfig.url} />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={siteConfig.description} />
 	<meta name="twitter:image" content={siteConfig.ogImage} />
 	<meta name="twitter:image:alt" content={siteConfig.name} />
-	<meta name="twitter:creator" content="huntabyte" />
+	<meta name="twitter:creator" content="jekibus" />
 	<meta property="og:title" content={title} />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content={siteConfig.url + $page.url.pathname} />
