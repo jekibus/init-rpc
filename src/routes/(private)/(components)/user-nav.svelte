@@ -1,20 +1,9 @@
-<script context="module" lang="ts">
-	export type AuthUser = {
-		id: string;
-		username: string;
-		name: string;
-		role: string | undefined;
-		token: string | undefined;
-	};
-	export const authUser: Writable<AuthUser | undefined> = writable();
-</script>
-
 <script lang="ts">
-	import { writable, type Writable } from 'svelte/store';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu/index';
 	import { Button } from '$lib/components/ui/button';
 	import { User2 } from 'lucide-svelte';
 	import { goto } from '$app/navigation';
+	import { authUser } from '$lib/store';
 
 	function logout() {
 		authUser.set(undefined);
