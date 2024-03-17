@@ -19,7 +19,7 @@
 
 	function dereference(schema: any) {
 		dispatch('loading', false);
-		isLoading = false;
+		// isLoading = false;
 		if (!schema) return;
 		return cloneObject(schema);
 	}
@@ -56,7 +56,6 @@
 				<p class="text-sm text-muted-foreground">{schema.description}</p>
 			</div>
 		{/if}
-
 		<form class="my-2" on:submit|preventDefault={onSubmit}>
 			{#await dereferencing}
 				<center><Loader class="animate-spin" /></center>
