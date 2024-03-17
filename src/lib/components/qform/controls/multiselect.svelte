@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Label from '$lib/components/ui/label/label.svelte';
 	import { onMount } from 'svelte';
-	import * as funcs from '../../../functions/index';
+	import * as funcs from '../functions/index';
 	import * as Popover from '$lib/components/ui/popover';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Checkbox from '$lib/components/ui/checkbox/checkbox.svelte';

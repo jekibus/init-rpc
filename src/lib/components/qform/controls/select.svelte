@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Label from '$lib/components/ui/label/label.svelte';
 	import { onMount } from 'svelte';
-	import * as funcs from '../../../functions/index';
+	import * as funcs from '../functions/index';
 
 	export let key: string;
 	export let data: string | undefined = $$props.default;
