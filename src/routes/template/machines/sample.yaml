@@ -1,0 +1,24 @@
+entrypoint: start
+states:
+  start:
+    ON_MOUNT: idle
+  idle:
+    SUBMIT_X: submitting
+  submitting:
+    _enter:
+      # config.set has an output event: NEXT
+      function: config.set
+      config:
+        grid_name: template_1
+        path: subtitle
+        value: testing update
+        debounce: 3000 # used to delaying transition
+    NEXT: goto
+  goto:
+    _enter:
+      # router.goto has an output event: NEXT
+      function: router.goto
+      config:
+        to: /
+    NEXT: end
+  end:

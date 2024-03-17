@@ -6,12 +6,16 @@ description: This is page description
 options:
   no_gap: false # used to gap between grid item
 grid:
-  - component: widgets/template
+  - component: widgets_template
+    name: template_1
+    machine: sample
     config:
       title: Welcome to Merdika
       subtitle: Please update this content
-  - component: widgets/template
+  - component: widgets_template
+    name: template_2
     class: text-right # this widget have a class option
+    machine: sample
     config:
       title: You have class option,
       subtitle: Using class key you have more feature
