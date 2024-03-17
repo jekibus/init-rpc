@@ -1,0 +1,18 @@
+---
+# this is a template for layout
+
+title: Template Page
+description: This is page description
+options:
+  grid: false
+  # gap: false # used to gap between grid item
+grid:
+  - component: widgets_forms_login
+    name: grid_form_login
+    machine: form_submit
+    config:
+      title: Welcome to Merdika
+      subtitle: Please update this content
+      logo: /favicon.png
+      schema: form_login
+      is_loading: false

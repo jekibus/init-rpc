@@ -1,0 +1,22 @@
+entrypoint: start
+states:
+  start:
+    ON_SUBMIT: submitting
+  submitting:
+    _enter:
+      function: config.set
+      config:
+        grid_name: grid_form_login
+        path: is_loading
+        value: true
+    NEXT: delay
+  delay:
+    _enter:
+      function: config.set
+      config:
+        grid_name: grid_form_login
+        path: is_loading
+        value: false
+    NEXT: end
+    # success: completed
+  end:
